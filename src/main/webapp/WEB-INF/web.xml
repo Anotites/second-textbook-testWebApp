@@ -34,6 +34,58 @@
         <servlet-name>My3Servlet</servlet-name>
         <url-pattern>/name</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My4Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom11</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My4Servlet</servlet-name>
+        <url-pattern>/browser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My5Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom12</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My5Servlet</servlet-name>
+        <url-pattern>/count</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My6Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom13</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My6Servlet</servlet-name>
+        <url-pattern>/countCookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My7Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom14</servlet-class>
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/ListExpenses</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value/>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My7Servlet</servlet-name>
+        <url-pattern>/payments</url-pattern>
+    </servlet-mapping>
 </web-app>
 
 

@@ -5,6 +5,25 @@
          https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
+    <security-role>
+        <role-name>manager-gui</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>User Auth</web-resource-name>
+            <url-pattern>/insert</url-pattern>
+            <url-pattern>/delete</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>manager-gui</role-name>
+        </auth-constraint>
+    </security-constraint>
+
     <servlet>
         <servlet-name>MyFirstServlet</servlet-name>
         <servlet-class>com.anotites.servlets.FirstServletFrom8</servlet-class>
@@ -85,6 +104,72 @@
     <servlet-mapping>
         <servlet-name>My7Servlet</servlet-name>
         <url-pattern>/payments</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My8Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom15</servlet-class>
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/ListExpenses</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value/>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My8Servlet</servlet-name>
+        <url-pattern>/paymentsNew</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My9Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom16Delete</servlet-class>
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/ListExpenses</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value/>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My9Servlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>My10Servlet</servlet-name>
+        <servlet-class>com.anotites.servlets.ServletFrom16Insert</servlet-class>
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/ListExpenses</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value/>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>My10Servlet</servlet-name>
+        <url-pattern>/insert</url-pattern>
     </servlet-mapping>
 </web-app>
 

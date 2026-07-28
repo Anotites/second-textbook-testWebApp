@@ -38,7 +38,7 @@ public class ServletFrom10 extends HttpServlet {
         boolean phoneMissing = (phone == null || phone.isEmpty());
         boolean emailMissing = (email == null || email.isEmpty());
 
-        if (nameMissing || (phoneMissing&& emailMissing)) {
+        if (nameMissing || (phoneMissing && emailMissing)) {
             out.println("<html><head><title>Error</title></head>");
             out.println("<body><h1>" + "Вы ввели не все необходимые данные" + "</h1>");
             out.println("<a href=''>Назад</a>");

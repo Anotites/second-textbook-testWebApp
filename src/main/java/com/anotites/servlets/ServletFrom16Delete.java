@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Serial;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServletFrom16Delete extends HttpServlet {
     @Serial
@@ -26,7 +28,8 @@ public class ServletFrom16Delete extends HttpServlet {
         String dbURL = conf.getInitParameter("dbURL");
         String username = conf.getInitParameter("username");
         String password = conf.getInitParameter("password");
-        StringBuilder s = new StringBuilder();
+//        StringBuilder s = new StringBuilder();
+        List<String[]> rows = new ArrayList<>();
         boolean k = true;
         int newNumberForDelete;
 
@@ -66,19 +69,28 @@ public class ServletFrom16Delete extends HttpServlet {
                 String queryForShow = "SELECT expenses.num,value,name,paydate FROM expenses, receivers rs WHERE receiver=rs.num;";
                 ResultSet result = statement.executeQuery(queryForShow);
 
-                StringBuilder d = new StringBuilder();
-                d.append("num").append(" ").append("value").append(" ").append("name")
-                        .append(" ").append("paydate").append("<br>");
                 while (result.next()) {
-                    s.append(result.getString(1)).append(" ").append(result.getString(2))
-                            .append(" ").append(result.getString(3)).append(" ").append(result.getString(4)).append("<br>");
+                    rows.add(new String[]{
+                            result.getString("num"),
+                            result.getString("name"),
+                            result.getString("value"),
+                            result.getString("paydate")
+                    });
                 }
-                s = d.append(s);
+//                StringBuilder d = new StringBuilder();
+//                d.append("num").append(" ").append("value").append(" ").append("name")
+//                        .append(" ").append("paydate").append("<br>");
+//                while (result.next()) {
+//                    s.append(result.getString(1)).append(" ").append(result.getString(2))
+//                            .append(" ").append(result.getString(3)).append(" ").append(result.getString(4)).append("<br>");
+//                }
+//                s = d.append(s);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
             request.setAttribute("number", number);
-            request.setAttribute("table", s);
+            request.setAttribute("rows", rows);
+//            request.setAttribute("table", s);
             request.getRequestDispatcher("/WEB-INF/resultForDelete.jsp").forward(request, response);
         }
     }

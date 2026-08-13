@@ -6,10 +6,13 @@ com/anotites/bases/JDBCFrom4To5.class
 com/anotites/App.class
 com/anotites/servlets/ServletFrom13.class
 com/anotites/servlets/ServletFrom10.class
+com/anotites/util/HibernateUtil.class
+com/anotites/loader/PersonLoader.class
 com/anotites/servlets/ServletFrom14.class
 com/anotites/DAO/Dao.class
 com/anotites/DAO/Expense.class
 com/anotites/servlets/ServletFrom16Delete.class
+com/anotites/pojos/Person.class
 com/anotites/bases/JDBC62.class
 com/anotites/servlets/FirstServletFrom9.class
 com/anotites/bases/JDBC61.class

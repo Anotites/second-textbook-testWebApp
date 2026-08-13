@@ -1,9 +1,12 @@
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/DAO/Receiver.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom10.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom13.java
+/Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/util/HibernateUtil.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/bases/JDBC62.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/bases/JDBCFrom4To5.java
+/Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/loader/PersonLoader.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/FirstServletFrom8.java
+/Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/pojos/Person.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/DAO/Main.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom11.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom16Delete.java

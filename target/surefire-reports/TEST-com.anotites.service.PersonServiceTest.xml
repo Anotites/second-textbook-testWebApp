@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.anotites.service.PersonServiceTest" time="0.603" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.anotites.service.PersonServiceTest" time="0.598" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BY"/>
     <property name="sun.boot.library.path" value="/Users/anotites/.sdkman/candidates/java/21.0.6-tem/lib"/>
-    <property name="sun.java.command" value="/Users/anotites/IdeaProjects/testWebApp/target/surefire/surefirebooter-20260814220721943_3.jar /Users/anotites/IdeaProjects/testWebApp/target/surefire 2026-08-14T22-07-21_916-jvmRun1 surefire-20260814220721943_1tmp surefire_0-20260814220721943_2tmp"/>
+    <property name="sun.java.command" value="/Users/anotites/IdeaProjects/testWebApp/target/surefire/surefirebooter-20260815123226359_3.jar /Users/anotites/IdeaProjects/testWebApp/target/surefire 2026-08-15T12-32-26_332-jvmRun1 surefire-20260815123226359_1tmp surefire_0-20260815123226359_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/anotites/IdeaProjects/testWebApp/target/test-classes:/Users/anotites/IdeaProjects/testWebApp/target/classes:/Users/anotites/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/anotites/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/anotites/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/anotites/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/anotites/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/anotites/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/anotites/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/anotites/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/anotites/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/anotites/.m2/repository/org/hibernate/orm/hibernate-core/6.4.0.Final/hibernate-core-6.4.0.Final.jar:/Users/anotites/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/anotites/.m2/repository/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar:/Users/anotites/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/anotites/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/anotites/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/anotites/.m2/repository/net/bytebuddy/byte-buddy/1.14.7/byte-buddy-1.14.7.jar:/Users/anotites/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/anotites/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0.jar:/Users/anotites/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.2/jaxb-runtime-4.0.2.jar:/Users/anotites/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.2/jaxb-core-4.0.2.jar:/Users/anotites/.m2/repository/org/eclipse/angus/angus-activation/2.0.0/angus-activation-2.0.0.jar:/Users/anotites/.m2/repository/org/glassfish/jaxb/txw2/4.0.2/txw2-4.0.2.jar:/Users/anotites/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.1/istack-commons-runtime-4.1.1.jar:/Users/anotites/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/anotites/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/anotites/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/anotites/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/3.0.0/jakarta.servlet.jsp.jstl-api-3.0.0.jar:/Users/anotites/.m2/repository/jakarta/el/jakarta.el-api/5.0.0/jakarta.el-api-5.0.0.jar:/Users/anotites/.m2/repository/org/glassfish/web/jakarta.servlet.jsp.jstl/3.0.1/jakarta.servlet.jsp.jstl-3.0.1.jar:/Users/anotites/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/anotites/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar:/Users/anotites/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar:/Users/anotites/.m2/repository/org/testng/testng/7.12.0/testng-7.12.0.jar:/Users/anotites/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/anotites/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/anotites/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/anotites/IdeaProjects/testWebApp/target/surefire/surefirebooter-20260814220721943_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/anotites/IdeaProjects/testWebApp/target/surefire/surefirebooter-20260815123226359_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.6+7-LTS"/>
@@ -59,7 +59,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testLoadPerson" classname="com.anotites.service.PersonServiceTest" time="0.582">
+  <testcase name="testLoadPerson" classname="com.anotites.service.PersonServiceTest" time="0.578">
     <system-out><![CDATA[Hibernate: 
     insert 
     into
@@ -78,27 +78,27 @@ Hibernate:
     where
         p1_0.id=?
 ]]></system-out>
-    <system-err><![CDATA[авг. 14, 2026 10:07:22 PM org.hibernate.Version logVersion
+    <system-err><![CDATA[авг. 15, 2026 12:32:26 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version 6.4.0.Final
-авг. 14, 2026 10:07:22 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+авг. 15, 2026 12:32:26 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
 INFO: HHH000026: Second-level cache disabled
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using built-in connection pool (not intended for production use)
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/MyNewDB?createDatabaseIfNotExist=true]
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {password=****, user=root}
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-авг. 14, 2026 10:07:22 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+авг. 15, 2026 12:32:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH10001115: Connection pool size: 20 (min=1)
-авг. 14, 2026 10:07:22 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
-INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@63917fe1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+авг. 15, 2026 12:32:27 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@677349fb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 ]]></system-err>
   </testcase>
-  <testcase name="testDeletePerson" classname="com.anotites.service.PersonServiceTest" time="0.008">
+  <testcase name="testDeletePerson" classname="com.anotites.service.PersonServiceTest" time="0.006">
     <system-out><![CDATA[Hibernate: 
     insert 
     into

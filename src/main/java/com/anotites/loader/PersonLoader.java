@@ -12,13 +12,22 @@ public class PersonLoader {
 //        em.getTransaction().commit();
 //        HibernateUtil.close();
 
-        PersonService personService = new PersonService();
-        Person person1 = personService.loadPerson(1);
-        System.out.println("Имя " + person1.getName());
+//        PersonService personService = new PersonService();
+//        Person person1 = personService.loadPerson(72);
+//        System.out.println("Имя " + person1.getName());
+//
+//        personService.savePerson(null, 33, "Oleg", "Smirnov");
+//        personService.savePerson(null, 30, "Oleg", "Smirnov");
 
-        personService.savePerson(null, 33, "Oleg", "Smirnov");
-        personService.savePerson(null, 30, "Oleg", "Smirnov");
-
-        personService.deletePerson(11);
+//        personService.deletePerson(11);
+//        personService.demonstrateDifference();
+//        personService.demonstrateFlushAndClear();
+//        personService.demonstrateRefresh();
+//        personService.demonstrateTriggerSync();
+//        personService.deletePerson(person1);
+//        personService.createAndDeletePerson(30, "Oleg", "SmirnovForDelete");
+//        Person PersonForDelete = personService.savePerson(null, 30, "Oleg", "SmirnovForDelete2");
+//        personService.createAndDeletePerson(PersonForDelete);
+//        personService.demonstrateCreateAndDeleteInSingleTransaction();
     }
 }

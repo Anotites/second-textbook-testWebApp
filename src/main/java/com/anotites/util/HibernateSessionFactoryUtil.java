@@ -1,5 +1,6 @@
 package com.anotites.util;
 
+import com.anotites.pojos.Animal;
 import com.anotites.pojos.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,6 +18,7 @@ public class HibernateSessionFactoryUtil {
         try {
             Configuration configuration = new Configuration().configure();
             configuration.addAnnotatedClass(Person.class);   // <-- ЯВНАЯ РЕГИСТРАЦИЯ СУЩНОСТИ
+            configuration.addAnnotatedClass(Animal.class);   // <-- ЯВНАЯ РЕГИСТРАЦИЯ СУЩНОСТИ
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
             sessionFactory = configuration.buildSessionFactory(builder.build());
         } catch (Throwable e) {

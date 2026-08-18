@@ -1,7 +1,9 @@
 package com.anotites.loader;
 
 import com.anotites.pojos.task8_1.EmployeeForTablePerClass;
+import com.anotites.pojos.task8_1.PersonForTablePerClass;
 import com.anotites.pojos.task8_1.StudentForTablePerClass;
+import com.anotites.service.PersonServiceForTablePerClass;
 import com.anotites.util.HibernateUtil;
 import jakarta.persistence.EntityManager;
 
@@ -31,6 +33,16 @@ public class PersonForTablePerClassLoader {
         em2.getTransaction().begin();
         em2.persist(employee);
         em2.getTransaction().commit();
+
+        PersonServiceForTablePerClass personService = new PersonServiceForTablePerClass();
+        personService.deletePerson(1);
+        personService.savePerson(employee);
+        personService.deletePerson(employee);
+        PersonForTablePerClass p = personService.loadPerson(2);
+        System.out.println("Возраст " + p.getAge());
+
+        em2.close();
+        em1.close();
         HibernateUtil.close();
     }
 }

@@ -14,7 +14,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "STUDENT")
 @DiscriminatorValue("S")
 public class StudentForTablePerClass extends PersonForTablePerClass implements Serializable {
     @Serial

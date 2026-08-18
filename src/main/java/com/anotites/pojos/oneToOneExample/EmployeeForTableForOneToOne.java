@@ -1,13 +1,7 @@
-package com.anotites.pojos.task8_3;
+package com.anotites.pojos.oneToOneExample;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-
-import java.io.Serial;
+import jakarta.persistence.*;
+import lombok.*;
 import java.io.Serializable;
 
 @Data
@@ -15,16 +9,19 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "EMPLOYEEForTablePerConcreteClass")
-public class EmployeeForTablePerConcreteClass extends PersonForTablePerConcreteClass implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 4L;
-    private String company;
-    private Double salary;
+@Table(name = "EMPLOYEEForOneToOne")
+public class EmployeeForTableForOneToOne implements Serializable {
 
-    public EmployeeForTablePerConcreteClass(Integer id, Integer age, String name, String surname, String company, Double salary) {
-        super(id, age, name, surname);
-        this.company = company;
-        this.salary = salary;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column
+    private Integer age;
+    @Column
+    private String name;
+    @Column
+    private String surname;
+    @OneToOne(mappedBy = "employeeForTableForOneToOne", cascade = CascadeType.ALL)
+    @ToString.Exclude
+    private EmployeeDetail employeeDetail;
 }

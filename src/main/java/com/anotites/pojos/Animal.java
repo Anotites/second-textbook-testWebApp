@@ -1,9 +1,15 @@
 package com.anotites.pojos;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @Entity
 @Access(AccessType.FIELD) // по умолчанию все поля через FIELD
 public class Animal implements Serializable {

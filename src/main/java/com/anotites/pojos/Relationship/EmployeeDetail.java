@@ -1,4 +1,4 @@
-package com.anotites.pojos.oneToOneExample;
+package com.anotites.pojos.Relationship;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,7 +12,6 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 public class EmployeeDetail implements Serializable {
-
     @Serial
     private static final long serialVersionUID = 5L;
     @Id
@@ -28,5 +27,6 @@ public class EmployeeDetail implements Serializable {
     @MapsId
     @JoinColumn(name = "employee_id")
     @ToString.Exclude
-    private EmployeeForTableForOneToOne employeeForTableForOneToOne;
+    @EqualsAndHashCode.Exclude
+    private EmployeeForRelationship employeeForRelationship;
 }

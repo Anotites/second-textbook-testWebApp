@@ -1,4 +1,4 @@
-package com.anotites.HQL_JPQL;
+package com.anotites.HQL_JPQL_CriteriaQuery;
 
 import jakarta.persistence.*;
 import lombok.*;

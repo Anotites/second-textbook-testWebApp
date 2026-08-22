@@ -5,16 +5,12 @@
     <!-- Кэш по умолчанию -->
     <cache alias="default">
         <expiry>
-            <ttl unit="seconds">3600</ttl> <!-- Время жизни 1 час -->
+            <ttl unit="seconds">3600</ttl>
         </expiry>
-        <heap unit="entries">1000</heap> <!-- Максимум 1000 записей в памяти -->
     </cache>
-
-    <!-- Кэш для конкретной сущности com.example.MyEntity -->
     <cache alias="com.anotites.HQL_JPQL_CriteriaQuery.PersonForHQL_JPQL">
         <expiry>
-            <ttl unit="seconds">600</ttl> <!-- Время жизни 10 минут -->
+            <ttl unit="seconds">600</ttl>
         </expiry>
-        <heap unit="entries">200</heap>
     </cache>
 </config>

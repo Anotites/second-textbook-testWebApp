@@ -1,0 +1,20 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.ehcache.org/v3"
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+
+    <!-- Кэш по умолчанию -->
+    <cache alias="default">
+        <expiry>
+            <ttl unit="seconds">3600</ttl> <!-- Время жизни 1 час -->
+        </expiry>
+        <heap unit="entries">1000</heap> <!-- Максимум 1000 записей в памяти -->
+    </cache>
+
+    <!-- Кэш для конкретной сущности com.example.MyEntity -->
+    <cache alias="com.anotites.HQL_JPQL_CriteriaQuery.PersonForHQL_JPQL">
+        <expiry>
+            <ttl unit="seconds">600</ttl> <!-- Время жизни 10 минут -->
+        </expiry>
+        <heap unit="entries">200</heap>
+    </cache>
+</config>

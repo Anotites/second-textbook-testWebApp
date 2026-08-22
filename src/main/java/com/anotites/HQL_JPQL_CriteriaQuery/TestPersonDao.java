@@ -15,6 +15,14 @@ public class TestPersonDao {
         PersonForHQL_JPQLDAO dao2 = new PersonForHQL_JPQLDAO(em, cb);
 
         try {
+            System.out.println("=== Проверка кэша: первый вызов ===");
+            Optional<PersonForHQL_JPQL> first = dao.findById(1);
+            first.ifPresent(System.out::println);
+
+            System.out.println("=== Проверка кэша: второй вызов (должен быть без SQL) ===");
+            Optional<PersonForHQL_JPQL> second = dao.findById(1);
+            second.ifPresent(System.out::println);
+
             // Начинаем транзакцию для вставки тестовых данных
             em.getTransaction().begin();
 
@@ -118,7 +126,7 @@ public class TestPersonDao {
             c5.forEach(System.out::println);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getCause();
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }

@@ -2,6 +2,9 @@ package com.anotites.HQL_JPQL_CriteriaQuery;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Cache;
+
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -11,6 +14,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "PersonForHQL_JPQL")
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE) // Стратегия параллельного доступа
 public class PersonForHQL_JPQL implements Serializable {
     @Serial
     private static final long serialVersionUID = 5L;

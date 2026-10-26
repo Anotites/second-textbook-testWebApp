@@ -11,4 +11,16 @@ public class GreetingService {
     public void sayHello() {
         System.out.println("Spring says: " + greeting);
     }
+
+    public static GreetingService getInstance() {
+        return new GreetingService();
+    }
+
+    public void init() {
+        System.out.println("Initialisation");
+    }
+
+    public void destroy() {
+        System.out.println("Destruction");
+    }
 }

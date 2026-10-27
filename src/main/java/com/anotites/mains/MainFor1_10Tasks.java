@@ -4,7 +4,7 @@ import com.anotites.pojos.spring.*;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MainFor1_8Tasks {
+public class MainFor1_10Tasks {
     public static void main(String[] args) {
         // Загружаем контекст из XML в classpath
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -22,6 +22,7 @@ public class MainFor1_8Tasks {
         PersonFor7 personByType = context.getBean("personByType", PersonFor7.class);
         PersonFor7 personConstructor = context.getBean("personConstructor", PersonFor7.class);
         PersonFor8 personAnnotation = context.getBean("personAnnotation", PersonFor8.class);
+        PersonFor9 personAnnotationQualifier = context.getBean("personAnnotationQualifier", PersonFor9.class);
 
 
         // Вызываем метод
@@ -37,6 +38,8 @@ public class MainFor1_8Tasks {
         personByType.printInfo();
         personConstructor.printInfo();
         personAnnotation.printInfo();
+        personAnnotationQualifier.setName("Lena"); // Добавьте эту строку
+        personAnnotationQualifier.printInfo();
 
         // Закрываем контекст, чтобы вызвались destroy-методы
         context.close();

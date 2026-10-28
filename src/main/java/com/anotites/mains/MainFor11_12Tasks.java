@@ -4,7 +4,7 @@ import com.anotites.service.NewServiceForSpring;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MainsFor11Tasks {
+public class MainFor11_12Tasks {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 

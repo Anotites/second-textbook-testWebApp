@@ -7,8 +7,8 @@
     <groupId>com.epam.maven</groupId>
     <artifactId>testWebApp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!--    <packaging>war</packaging>-->
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
+<!--    <packaging>jar</packaging>-->
 
     <name>testWebApp Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
@@ -33,6 +33,24 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <!-- Thymeleaf для Spring 6 (совместим с Jakarta EE) -->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring6</artifactId>
+            <version>3.1.2.RELEASE</version>
+        </dependency>
+        <!-- JSP API (обычно предоставляется контейнером, но нужен для компиляции) -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Spring ORM (интеграция с Hibernate) -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -174,26 +192,32 @@
         <finalName>testWebApp</finalName>
         <plugins>
             <!-- Плагин для создания исполняемого fat jar -->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-shade-plugin</artifactId>-->
+<!--                <version>3.5.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>shade</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <transformers>-->
+<!--                                <transformer-->
+<!--                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+<!--                                    <mainClass>com.anotites.loader.PersonLoader</mainClass>-->
+<!--                                </transformer>-->
+<!--                            </transformers>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+            <!-- Плагин для сборки WAR-файла -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.anotites.loader.PersonLoader</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
             </plugin>
 
             <!-- Компилятор -->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, content)">
+<head>
+    <meta charset="UTF-8">
+    <!-- Используем th:text для вывода строки -->
+    <title th:text="${title}">Мое приложение</title>
+</head>
+<body style="font-family: Arial;">
+
+<header style="background: #eee; padding: 10px;">
+    <div th:replace="~{fragments/header :: header}"></div>
+</header>
+
+<main style="padding: 20px;">
+    <!-- Вставляем переданный контент -->
+    <div th:replace="${content}"></div>
+</main>
+
+<footer style="background: #eee; padding: 10px; margin-top: 20px;">
+    <div th:replace="~{fragments/footer :: footer}"></div>
+</footer>
+
+</body>
+</html>

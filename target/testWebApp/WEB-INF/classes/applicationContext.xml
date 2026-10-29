@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/aop
+                           https://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-init-method="init" default-destroy-method="destroy">
+    <!--    <context:component-scan base-package="com.anotites.pojos.spring"/>-->
+    <context:component-scan base-package="com.anotites" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+    </context:component-scan>
+    <aop:aspectj-autoproxy/>
+
+    <!-- Создаем бин и внедряем в него строку -->
+    <bean id="greetingService" class="com.anotites.pojos.spring.GreetingService"
+          factory-method="getInstance"
+          scope="singleton"
+          init-method="init" destroy-method="destroy">
+        <property name="greeting" value="Hello from XML Configuration!"/>
+    </bean>
+
+    <!-- НЕ указываем init-method и destroy-method, чтобы проверить default-* -->
+    <bean id="defaultGreetingService" class="com.anotites.pojos.spring.GreetingService"
+          factory-method="getInstance">
+        <property name="greeting" value="Hello from Default Init/Destroy!"/>
+    </bean>
+
+    <!-- Для третьего задания-* -->
+    <bean id="pGreetingService" class="com.anotites.pojos.spring.GreetingService"
+          factory-method="getInstance"
+          p:greeting="Hello from p:namespaces!"/>
+
+    <!-- Для четвертого задания-* -->
+    <bean id="person" class="com.anotites.pojos.spring.Person"
+          factory-method="getInstance">
+        <property name="name" value="Olga"/>
+        <property name="flats">
+            <list>
+                <value>1</value>
+                <value>64</value>
+            </list>
+        </property>
+        <property name="surname">
+            <set>
+                <value>Smirnova</value>
+                <value>Ivanova</value>
+            </set>
+        </property>
+        <property name="exams">
+            <map>
+                <entry key="Chemistry" value="9"/>
+                <entry key="English" value="10"/>
+            </map>
+        </property>
+        <property name="books">
+            <props>
+                <prop key="Tolstoy">Voina i Mir</prop>
+                <prop key="Bulgakov">Master i Margarita</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Для пятого задания-* -->
+    <bean id="newPerson" class="com.anotites.pojos.spring.NewPerson">
+        <property name="name">
+            <null/>
+        </property>
+    </bean>
+
+    <bean id="newPersonWithoutNull" class="com.anotites.pojos.spring.NewPerson">
+        <constructor-arg index="0" value="Ivan"/>
+    </bean>
+
+    <!-- Для шестого задания-* -->
+    <bean id="mathExample" class="com.anotites.pojos.spring.MathExample">
+        <property name="i" value="#{T(java.lang.Math).PI}"/>
+        <property name="square" value="#{T(java.lang.Math).PI*2*2}"/>
+        <property name="logic" value="#{T(java.lang.Math).PI ge 3}"/>
+        <property name="rel" value="#{T(java.lang.Math).PI ge 3 and 3 ge 4}"/>
+        <property name="example" value="#{person.exams['Chemistry']}"/>
+    </bean>
+
+    <!-- Для седьмого задания-* -->
+    <bean id="address" class="com.anotites.pojos.spring.AddressFor7" autowire-candidate="false"/>
+    <bean id="personNo" class="com.anotites.pojos.spring.PersonFor7" autowire="no">
+        <property name="name" value="Ivan"/>
+        <property name="address" ref="address"/> <!-- Явно указываем зависимость -->
+    </bean>
+
+    <bean id="personByName" class="com.anotites.pojos.spring.PersonFor7" autowire="byName">
+        <property name="name" value="Ivan"/>
+        <!-- <property name="address"> писать НЕ НУЖНО, Spring сам найдет бин с id="address" -->
+    </bean>
+
+    <!-- id может быть любым, главное - тип (class) -->
+    <bean id="mySuperAddress" class="com.anotites.pojos.spring.AddressFor7" autowire-candidate="true"/>
+    <bean id="personByType" class="com.anotites.pojos.spring.PersonFor7" autowire="byType">
+        <property name="name" value="Ivan"/>
+        <!-- Spring найдет бин типа Address и внедрит его -->
+    </bean>
+
+    <!-- Бин Person БЕЗ пустого конструктора, только с public Person(Address address) -->
+    <bean id="personConstructor" class="com.anotites.pojos.spring.PersonFor7" autowire="constructor">
+        <property name="name" value="Ivan"/> <!-- Сеттеры отработают после создания -->
+    </bean>
+
+    <!-- Для восьмого задания-* -->
+    <bean id="personAnnotation" class="com.anotites.pojos.spring.PersonFor8">
+        <property name="name" value="Vasya"/>
+    </bean>
+
+    <!-- Для девятого задания-* -->
+    <!--    <bean id="personAnnotationQualifier" class="com.anotites.pojos.spring.PersonFor9">-->
+    <!--        <property name="name" value="Lena"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="addressnnotationQualifier" class="com.anotites.pojos.spring.AddressFor9"/>-->
+
+    <!-- Для 11 задания-* -->
+    <!-- 1. Регистрируем аспект как обычный бин -->
+<!--    <bean id="loggingAspect" class="com.anotites.aop.LoggingAspect" />-->
+
+<!--    &lt;!&ndash; 2. Вся AOP-конфигурация должна быть внутри <aop:config> &ndash;&gt;-->
+<!--    <aop:config>-->
+<!--        &lt;!&ndash; 3. Определяем аспект и ссылаемся на бин &ndash;&gt;-->
+<!--        <aop:aspect id="myLoggingAspect" ref="loggingAspect">-->
+
+<!--            &lt;!&ndash; 4. Определяем срез (pointcut) &ndash;&gt;-->
+<!--            &lt;!&ndash; execution(* - любой возвращаемый тип, com.anotites.service..* - любой класс в пакете service и подпакетах, *(..) - любой метод с любыми аргументами) &ndash;&gt;-->
+<!--            <aop:pointcut id="allServiceMethods"-->
+<!--                          expression="execution(* com.anotites.service..*.*(..))" />-->
+
+<!--            &lt;!&ndash; 5. Определяем советы (advice), привязывая их к срезу &ndash;&gt;-->
+<!--            <aop:before pointcut-ref="allServiceMethods" method="logBefore" />-->
+<!--            <aop:after pointcut-ref="allServiceMethods" method="logAfter" />-->
+<!--            <aop:around pointcut-ref="allServiceMethods" method="logAround" />-->
+<!--            <aop:after-throwing pointcut-ref="allServiceMethods" method="logAfterThrowing" throwing="ex"/>-->
+<!--            <aop:after-returning pointcut-ref="allServiceMethods" method="logAfterReturning" />-->
+
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+</beans>

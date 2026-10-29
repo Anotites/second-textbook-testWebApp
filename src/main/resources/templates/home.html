@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/default :: layout(title='Главная страница', content=~{::content})}">
+<body>
+<div th:fragment="content">
+    <h2>Главная страница</h2>
+    <p>Добро пожаловать! Это контент только главной страницы.</p>
+</div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+com/anotites/config/WebConfig.class
 com/anotites/config/DatabaseConfig.class
 com/anotites/pojos/Relationship/EmployeeDetail.class
 com/anotites/servlets/ServletFrom16Insert.class
@@ -5,6 +6,7 @@ com/anotites/bases/JDBCFrom4To5.class
 com/anotites/HQL_JPQL_CriteriaQuery/PersonForHQL_JPQLDAO.class
 com/anotites/pojos/spring/PersonFor8.class
 com/anotites/servlets/ServletFrom10.class
+com/anotites/config/WebAppInitializer.class
 com/anotites/service/NewServiceForSpring.class
 com/anotites/service/RelationshipService.class
 com/anotites/service/PersonServiceNew.class
@@ -39,7 +41,6 @@ com/anotites/pojos/Address.class
 com/anotites/util/HibernateSessionFactoryUtil.class
 com/anotites/pojos/task8_1/EmployeeForTablePerClass.class
 com/anotites/pojos/spring/NewPerson.class
-com/anotites/mains/MainFor11Task.class
 com/anotites/pojos/Relationship/Meeting.class
 com/anotites/pojos/spring/AddressFor8.class
 com/anotites/DAO/Dao.class
@@ -48,6 +49,7 @@ com/anotites/service/PersonService.class
 com/anotites/service/PersonServiceForTablePerConcreteClass.class
 com/anotites/DAO/MyDao.class
 com/anotites/servlets/ServletFrom15.class
+com/anotites/web/MainController.class
 com/anotites/pojos/spring/PersonFor9.class
 com/anotites/pojos/spring/MathExample.class
 com/anotites/pojos/task8_1/PersonForTablePerClass.class
@@ -57,6 +59,7 @@ com/anotites/pojos/spring/Person.class
 com/anotites/DAO/Main.class
 com/anotites/pojos/task8_3/EmployeeForTablePerConcreteClass.class
 com/anotites/loader/PersonForTablePerClassLoader.class
+com/anotites/mains/MainFor11_12Tasks.class
 com/anotites/DAO/Receiver.class
 com/anotites/HQL_JPQL_CriteriaQuery/PersonView.class
 com/anotites/servlets/ServletFrom11.class
@@ -65,7 +68,7 @@ com/anotites/pojos/Animal.class
 com/anotites/util/HibernateUtil.class
 com/anotites/pojos/spring/AddressFor9.class
 com/anotites/pojos/task8_3/PersonForTablePerConcreteClass.class
-com/anotites/mains/MainFor13Task.class
+com/anotites/mains/MainFor13_15Tasks.class
 com/anotites/bases/JDBC63.class
 com/anotites/pojos/task8_2/StudentForTablePerSubClass.class
 com/anotites/servlets/FirstServletFrom8.class

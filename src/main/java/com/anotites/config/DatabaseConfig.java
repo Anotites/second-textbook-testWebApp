@@ -16,7 +16,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan("com.anotites")
+@ComponentScan(basePackages = {"com.anotites.service", "com.anotites.DAO"}) // ТОЛЬКО сервисы и DAO
 public class DatabaseConfig {
     @Bean
     public DataSource dataSource() {

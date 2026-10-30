@@ -10,6 +10,7 @@ com/anotites/config/WebAppInitializer.class
 com/anotites/service/NewServiceForSpring.class
 com/anotites/service/RelationshipService.class
 com/anotites/service/PersonServiceNew.class
+com/anotites/config/SecurityConfig.class
 com/anotites/servlets/ServletFrom14.class
 com/anotites/HQL_JPQL_CriteriaQuery/PersonForHQL_JPQL.class
 com/anotites/DAO/Expense.class
@@ -67,6 +68,7 @@ com/anotites/App.class
 com/anotites/pojos/Animal.class
 com/anotites/util/HibernateUtil.class
 com/anotites/pojos/spring/AddressFor9.class
+com/anotites/config/SecurityWebAppInitializer.class
 com/anotites/pojos/task8_3/PersonForTablePerConcreteClass.class
 com/anotites/mains/MainFor13_15Tasks.class
 com/anotites/bases/JDBC63.class

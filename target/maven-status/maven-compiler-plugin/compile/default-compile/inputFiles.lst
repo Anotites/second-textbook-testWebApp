@@ -51,8 +51,10 @@
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/DAO/Expense.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom14.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/servlets/ServletFrom16Insert.java
+/Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/config/SecurityWebAppInitializer.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/bases/JDBC63.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/HQL_JPQL_CriteriaQuery/PersonForHQL_JPQLDAO.java
+/Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/config/SecurityConfig.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/pojos/task8_1/PersonForTablePerClass.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/DAO/Receiver.java
 /Users/anotites/IdeaProjects/testWebApp/src/main/java/com/anotites/pojos/Day.java
